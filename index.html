@@ -17,44 +17,15 @@
   <link href="css/scrolling-nav.css" rel="stylesheet">
 
   <script src="lib/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="lib/plotly-binding-4.9.2.1/plotly.js"></script>
-<script src="lib/typedarray-0.1/typedarray.min.js"></script>
-<script src="lib/jquery-1.11.3/jquery.min.js"></script>
-<link href="lib/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="lib/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
-<link href="lib/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="lib/plotly-main-1.52.2/plotly-latest.min.js"></script>
+  <script src="lib/plotly-binding-4.9.2.1/plotly.js"></script>
+  <script src="lib/typedarray-0.1/typedarray.min.js"></script>
+  <script src="lib/jquery-1.11.3/jquery.min.js"></script>
+  <link href="lib/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+  <script src="lib/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+  <link href="lib/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="lib/plotly-main-1.52.2/plotly-latest.min.js"></script>
+  
 </head>
-
-  <script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
   
 <body id="page-top">
 
@@ -115,7 +86,8 @@ function includeHTML() {
         <div class="col-lg-8 mx-auto">
           <!-- <iframe src="fritz.html" title="Iframe Example"></iframe> -->
           <!-- <iframe src="p1.html"></iframe> -->
-          <iframe style="position: absolute; width: 100%; border: none" src="p1.html"></iframe>
+          <!-- position: absolute; -->
+          <iframe style="width: 100%; border: none" src="p1.html"></iframe>
           <!-- <div w3-include-html="p1.html"></div> -->
         </div>
       </div>
@@ -141,9 +113,6 @@ function includeHTML() {
     <!-- /.container -->
   </footer>
 
-  <script>
-includeHTML();
-</script>
   
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
