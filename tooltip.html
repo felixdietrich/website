@@ -19,6 +19,23 @@
   <link href="css/scrolling-nav.css" rel="stylesheet">
   
 </head>
+  
+<style>
+.custom-tooltip {
+    display: inline-block;
+    margin: 10px 20px;
+    opacity: 1;
+    position: relative;
+}
+
+.custom-tooltip .tooltip-inner {
+	background: #0088cc;
+}
+
+.custom-tooltip.top .tooltip-arrow {
+	border-top-color: #0088cc;
+}
+</style>
 
 <body id="page-top">
 
@@ -89,7 +106,10 @@
           <iframe style="width: 100%; height: 300px; border: 1px solid grey;" allowtransparency="true" src="testframe.html" title="teXXXt"></iframe>
         </div>
         <div class="col-lg-8 mx-auto">
-        <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+<div role="tooltip" class="tooltip top custom-tooltip">
+	<div class="tooltip-arrow"></div>
+	<div class="tooltip-inner">Tooltip on the top</div>
+</div>
         </div>
       </div>
     </div>
