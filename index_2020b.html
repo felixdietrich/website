@@ -26,31 +26,7 @@
   <script src="lib/plotly-main-1.52.2/plotly-latest.min.js"></script>
   
 </head>
-<style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-</style>
 <body id="page-top">
 
   <!-- Navigation -->
@@ -120,10 +96,7 @@
           <iframe style="width: 100%; height: 300px; border: 1px solid grey;" allowtransparency="true" src="testframe.html" title="teXXXt"></iframe>
         </div>
         <div class="col-lg-8 mx-auto">
-          Hover NOT over me
-          <div class="tooltip">Hover over me
-            <span class="tooltiptext">Tooltip text</span>
-          </div>
+<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
         </div>
       </div>
     </div>
@@ -158,7 +131,11 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
-
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </body>
 
 </html>
