@@ -6,8 +6,8 @@ options(scipen = 999)
 # a <- read.csv('~/Dropbox/NAV_U6136674.csv')
 # devtools::install_version("ggplot2", version = "3.2.1", repos = "http://cran.us.r-project.org")
 
-path = '~/'
-# path <- 'C:/Users/felix.dietrich/Documents/GitHub/website/'
+# path = '~/'
+path <- 'C:/Users/felix.dietrich/Documents/GitHub/website/'
 token <- readRDS(gzcon(url("https://dl.dropboxusercontent.com/s/id7x9vni8gjydi3/droptoken.rds")))
 a <- drop_read_csv('drdietrich/NAV_U1406322_2021.csv', dest = tempdir(), dtoken = token)
 b <- drop_read_csv('drdietrich/NAV.csv', dest = tempdir(), dtoken = token) # NAV_U6136674.csv
@@ -32,5 +32,5 @@ q <- ggplot(dat, aes(x = `date`, y = `series`)) + geom_line(color = rgb(255, 40,
         plot.background = element_rect(fill = "transparent",colour = NA))
 
 p <- ggplotly(q) %>% config(displayModeBar = FALSE) %>% layout(margin = list(l = 0, r = 0, t = 0, b = 0)) # negative margins funktioniert nicht
-htmlwidgets::saveWidget(p, paste0(path, "drdie_1.html"), background = "#f8f9fa", selfcontained = F, libdir = "lib")
+htmlwidgets::saveWidget(p, paste0(path, "drdie_NAV.html"), background = "#f8f9fa", selfcontained = F, libdir = "lib")
 
